@@ -5,16 +5,17 @@
 using namespace std;
 
 // Navie Appraoch
-// time complexity :
+// time complexity : O(n^2)
 // Aux space :
-void printLeaders(vector<int> &arr)
+void printLeaders(vector<int> arr)
 {
-    bool flag = true;
+
     for (int i = 0; i < arr.size(); i++)
     {
-        for (int j = i; j < arr.size(); j++)
+        bool flag = true;
+        for (int j = i + 1; j < arr.size(); j++)
         {
-            if (arr[j] > arr[i])
+            if (arr[i] <= arr[j])
             {
                 flag = false;
                 break;
@@ -46,13 +47,8 @@ int main()
     // Time Complexity
 
     vector<int> arr{1, 2, 3, 4, 5};
-    int d = 3;
-    cout << "Original Array : \n";
-    display(arr);
-    cout << endl;
-    cout << "Result : " << endl;
+
     printLeaders(arr);
-    display(arr);
 
     return 0;
 }
