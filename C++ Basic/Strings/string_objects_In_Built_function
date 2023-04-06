@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    char str1 = "welcome";
+    char str2 = "Nitesh ";
+    char str3;
+    int len;
+
+    // strcpy()
+    str3 = str1;
+    cout << str3 << endl;
+
+    // strcat()
+    str3 = str1 + str2;
+    cout << str3 << endl;
+    // strlen()
+    len = str1.size();
+    cout << len;
+}
